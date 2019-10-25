@@ -7,7 +7,7 @@ node {
 		mvnHome = tool 'maven-3.6.2'
 		sh "'${mvnHome}/bin/mvn' package"
 	}
-	stage('final') {
-		echo 'this is done'
+	stage('deploy') {
+		sh 'cp target/JenkinsWar.war /var/lib/tomcat7/webapps/'
 	}
 }
