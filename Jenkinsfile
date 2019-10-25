@@ -1,4 +1,4 @@
-node {
+node('slave') {
 	stage('clone') {
 		git 'https://github.com/jenkinsdemos/mavendeploy.git'
 	}
